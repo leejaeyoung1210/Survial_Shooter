@@ -24,10 +24,10 @@ public class PlayerMovement : MonoBehaviour
     
     private void FixedUpdate()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);        
-        //RaycastHit hit;
-        if (Physics.Raycast(ray, out RaycastHit hit , float.MaxValue , groundMask))
-        {            
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);        // 시작위치랑 방향
+        //RaycastHit hit; 
+        if (Physics.Raycast(ray, out RaycastHit hit , float.MaxValue , groundMask)) // 거리랑 검사지점
+        {       //시작주소, 오리진값     
             Vector3 mouseDir = new Vector3(hit.point.x, transform.position.y, hit.point.z);            
             transform.LookAt(mouseDir);
         }
