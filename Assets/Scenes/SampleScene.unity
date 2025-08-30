@@ -519,6 +519,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 100080, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400078, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1111,6 +1115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 8
+  jumpPower: 8
 --- !u!114 &1601671589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1240,9 +1245,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.66185755
-  m_Height: 1.7994165
+  m_Height: 1
   m_Direction: 1
-  m_Center: {x: 0.27, y: 1, z: -0.02}
+  m_Center: {x: 0.27, y: 0.75, z: -0.02}
 --- !u!54 &1601671592
 Rigidbody:
   m_ObjectHideFlags: 0
