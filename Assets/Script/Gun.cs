@@ -82,7 +82,7 @@ public class Gun : MonoBehaviour
         {
             hitposition = hit.point;
 
-            var target = hit.collider.GetComponent<IDamagable>();
+            var target = hit.collider.GetComponent<IamDamage>();
             if (target != null)
             {
                 target.OnDamage(gunData.damage, hitposition, hit.normal);
