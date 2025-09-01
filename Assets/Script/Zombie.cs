@@ -48,7 +48,7 @@ public class Zombie : Life
     public float attackInterval;
 
     private Transform target;
-    public ParticleSystem bloodEffect;
+    public ParticleSystem damageEffect;
 
     private void Awake()
     {
@@ -81,6 +81,9 @@ public class Zombie : Life
         base.OnDamage(damage, hitPoint, hitNormal);
         audioSource.PlayOneShot(zombieData.hurtClip);
 
+        damageEffect.transform.position = hitPoint;
+        damageEffect.transform.forward = hitNormal;
+        damageEffect.Play();
     }
 
     protected override void Die()
