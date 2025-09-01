@@ -13,7 +13,7 @@ public class Zombie : Life
 
     private NavMeshAgent agent;
     private State currentState = State.Idle;
-    public Animator animator;q
+    public Animator animator;
     private Collider zombieCollider;
     private AudioSource audioSource;
 
